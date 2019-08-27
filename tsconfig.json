@@ -21,6 +21,9 @@
       "DOM",
       "DOM.Iterable",
       "ES2017"
+    ],
+    "types": [
+      "node"
     ]
   },
   "include": [

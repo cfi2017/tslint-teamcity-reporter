@@ -36,11 +36,12 @@ export class Formatter extends AbstractFormatter {
     let outputMessage = '';
     switch (userConfig.reporter.toLowerCase()) {
       case 'inspections':
-        outputMessage = formatAsInspections(failures, userConfig);
+        outputMessage =
+          `[${process.env.TEST_CHAPTER}] ` + formatAsInspections(failures, userConfig);
         break;
       case 'errors':
       default:
-        outputMessage = formatAsTests(failures, userConfig);
+        outputMessage = `[${process.env.TEST_CHAPTER}] ` + formatAsTests(failures, userConfig);
         break;
     }
 
